@@ -55,7 +55,7 @@ _kafka_complete()
         COMPREPLY=( $(compgen -W "--broker-list --fetch-size --max-wait-ms --topic-white-list --time --report-interval-ms" -- $cur) )
         ;;
        "kafka.tools.SimpleConsumerPerformance")
-        COMPREPLY=( $(compgen -W "--server --topic --from-latest partition --fetch-size --clientId" -- $cur) )
+        COMPREPLY=( $(compgen -W "--server --topic --from-latest --partition --fetch-size --clientId" -- $cur) )
         ;;
        "kafka.tools.SimpleConsumerShell")
         COMPREPLY=( $(compgen -W "--broker-list --topic --partition --replica --offset --clientId --fetchsize --formatter --property --print-offsets --max-wait-ms --max-messages --skip-message-on-error --no-wait-at-logend" -- $cur) )
