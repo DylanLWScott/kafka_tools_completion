@@ -9,7 +9,7 @@ _kafka_complete()
   tools=(kafka.tools.ConsoleConsumer kafka.tools.ConsoleProducer kafka.tools.ConsumerOffsetChecker kafka.tools.ConsumerPerformance kafka.tools.DumpLogSegments kafka.tools.ExportZkOffsets kafka.tools.GetOffsetShell kafka.tools.ImportZkOffsets kafka.tools.JmxTool kafka.tools.MirrorMaker kafka.tools.PerfConfig kafka.tools.ProducerPerformance kafka.tools.ReplayLogProducer kafka.tools.ReplicaVerificationTool kafka.tools.SimpleConsumerPerformance kafka.tools.SimpleConsumerShell)
 
   if [ $COMP_CWORD -eq 1 ]; then
-    COMPREPLY=( $(compgen -W "$(echo ${tools[@]})" -- $cur) )
+    COMPREPLY=( $(compgen -W "$(echo ${tools[*]})" -- $cur) )
   elif [ $COMP_CWORD -eq 2 ]; then
     case "$prev" in
       "kafka.tools.ConsoleConsumer")
