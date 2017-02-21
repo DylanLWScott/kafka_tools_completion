@@ -327,7 +327,7 @@ _kafka-replay-log-producer()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--zookeeper --broker-list --inputtopic --outputtopic --messages --threads --reporting-interval --property --sync"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -342,7 +342,7 @@ _kafka-replica-verification()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--broker-list --fetch-size --max-wait-ms --topic-white-list --time --report-interval-ms"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
