@@ -6,7 +6,7 @@ _kafka_complete()
   cur=${COMP_WORDS[COMP_CWORD]}
   prev=${COMP_WORDS[COMP_CWORD-1]}
   
-  tools=(kafka.admin.AclCommand kafka.admin.ConfigCommand kafka.admin.ConsumerGroupCommand kafka.admin.PreferredReplicaLeaderElectionCommand kafka.admin.TopicCommand kafka.admin.ZkSecurityMigrator kafka.Kafka org.apache.kafka.connect.cli.ConnectDistributed org.apache.kafka.connect.cli.ConnectStandalone kafka.tools.ConsoleConsumer kafka.tools.ConsoleProducer kafka.tools.ConsumerOffsetChecker kafka.tools.ConsumerPerformance kafka.tools.DumpLogSegments kafka.tools.ExportZkOffsets kafka.tools.GetOffsetShell kafka.tools.ImportZkOffsets kafka.tools.JmxTool kafka.tools.MirrorMaker kafka.tools.PerfConfig kafka.tools.ProducerPerformance kafka.tools.ReplayLogProducer kafka.tools.ReplicaVerificationTool kafka.tools.SimpleConsumerPerformance kafka.tools.SimpleConsumerShell kafka.tools.EndToEndLatency kafka.tools.StreamsResetter kafka.tools.UpdateOffsetsInZK kafka.tools.ZooKeeperMainWrapper)
+  tools=(kafka.admin.AclCommand kafka.admin.ConfigCommand kafka.admin.ConsumerGroupCommand kafka.admin.PreferredReplicaLeaderElectionCommand kafka.admin.TopicCommand kafka.admin.ZkSecurityMigrator kafka.Kafka org.apache.kafka.connect.cli.ConnectDistributed org.apache.kafka.connect.cli.ConnectStandalone kafka.tools.ConsoleConsumer kafka.tools.ConsoleProducer kafka.tools.ConsumerOffsetChecker kafka.tools.ConsumerPerformance kafka.tools.DumpLogSegments kafka.tools.ExportZkOffsets kafka.tools.GetOffsetShell kafka.tools.ImportZkOffsets kafka.tools.JmxTool kafka.tools.MirrorMaker kafka.tools.PerfConfig kafka.tools.ProducerPerformance kafka.tools.ReplayLogProducer kafka.tools.ReplicaVerificationTool kafka.tools.SimpleConsumerPerformance kafka.tools.SimpleConsumerShell kafka.tools.EndToEndLatency kafka.tools.StreamsResetter kafka.tools.UpdateOffsetsInZK kafka.tools.ZooKeeperMainWrapper org.apache.kafka.connect.cli.ConnectDistributed org.apache.kafka.connect.cli.ConnecStandalone)
 
   if [ $COMP_CWORD -eq 1 ]; then
     COMPREPLY=( $(compgen -W "$(echo ${tools[*]})" $cur) )
@@ -101,7 +101,13 @@ _kafka_complete()
         ;; 
         "kafka.Kafka")
         COMPREPLY=( $(compgen -W "--override" -- $cur) )
-        ;;     
+        ;;   
+        "org.apache.kafka.connect.cli.ConnectDistributed")
+        COMPREPLY=( $(compgen -W "-daemon" -- $cur) )
+        ;; 
+        "org.apache.kafka.connect.cli.ConnectStandalone")
+        COMPREPLY=( $(compgen -W "-daemon" -- $cur) )
+        ;;        
       *)
         ;;
     esac
