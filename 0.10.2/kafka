@@ -357,7 +357,7 @@ _kafka-run-class()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="-daemon] -name -loggc"
+    opts="-daemon -name -loggc"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -402,7 +402,7 @@ _kafka-simple-consumer-shell()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="---broker-list --topic --partition --replica --offset --clientId --fetchsize --formatter --property --print-offsets --max-wait-ms --max-messages --skip-message-on-error --no-wait-at-logend"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
