@@ -8,3 +8,11 @@ Command completion for Kafka tools commands
 
 ## How to use this file in ZSH
 * [StackOverflow Q/A](http://stackoverflow.com/questions/3249432/i-have-a-bash-tab-completion-script-is-there-a-simple-way-to-use-it-from-zsh)
+* Notice the answers explaining the following:
+
+```bash
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+source /fullpath/bash_completion_script
+```
+
