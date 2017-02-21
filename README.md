@@ -11,8 +11,8 @@ Command completion for Kafka tools commands
 * Notice the answers explaining the following:
 
 ```bash
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
+autoload -U compinit
+autoload -U bashcompinit
 source /fullpath/bash_completion_script
 ```
 
