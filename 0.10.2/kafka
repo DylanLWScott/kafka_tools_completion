@@ -477,7 +477,7 @@ _zookeeper-security-migration()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--zookeeper.acl --zookeeper.connect --zookeeper.session.timeout --zookeeper.connection.timeout --help"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
