@@ -192,7 +192,7 @@ _kafka-console-consumer()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="---topic --whitelist --blacklist --partition --offset --zookeeper --consumer-property --consumer.config --formatter --property --delete-consumer-offsets --from-beginning --max-messages --timeout-ms --skip-message-on-error --csv-reporter-enabled --metrics-dir --new-consumer --bootstrap-server --key-deserializer --value-deserializer --enable-systest-events"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -207,7 +207,7 @@ _kafka-console-producer()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--topic --broker-list --sync --compression-codec --batch-size --message-send-max-retries --retry-backoff-ms --timeout --queue-size --queue-enqueuetimeout-ms --request-required-acks --request-timeout-ms --metadata-expiry-ms --max-block-ms --max-memory-bytes --max-partition-memory-bytes --value-serializer --key-serializer --line-reader --socket-buffer-size --property --producer-property --producer.config --old-producer"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
