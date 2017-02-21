@@ -76,7 +76,7 @@ _kafka_complete()
         COMPREPLY=( $(compgen -W "--earliest --latest --consumer.properties --topic" -- $cur) )
         ;;  
         "kafka.tools.ZooKeeperMainWrapper")
-        COMPREPLY=( $(compgen -W "-server -timeout" - $cur) )
+        COMPREPLY=( $(compgen -W "-server -timeout" -- $cur) )
         ;; 
       *)
         ;;
