@@ -65,7 +65,16 @@ _kafka_complete()
         ;; 
        "kafka.tools.VerifyConsumerRebalance")
         COMPREPLY=( $(compgen -W "--zookeeper.connect --group --help" -- $cur) )
-        ;;                              
+        ;; 
+       "kafka.tools.EndToEndLatency")
+        COMPREPLY=( $(compgen -W "--broker_list --topic num_messages --producer_acks --message_size_bytes --properties_file" -- $cur) )
+        ;; 
+       "kafka.tools.StreamsResetter")
+        COMPREPLY=( $(compgen -W "--application-id --bootstrap-servers --zookeeper --input-topics --intermediate-topics" -- $cur) )
+        ;; 
+       "kafka.tools.UpdateOffsetsInZK")
+        COMPREPLY=( $(compgen -W "--earliest --latest --consumer.properties --topic" -- $cur) )
+        ;;        
       *)
         ;;
     esac
