@@ -10,7 +10,7 @@ my @values;
 
 while (<>) {
   my $currLine = $_;
-  if ($currLine =~ /parser\.accepts\(\"(.*?)\"/) {
+  if ($currLine =~ /parser\.accepts\(\"(.*?)\"/i) {
     push @values, $1;               
   }  
 }
