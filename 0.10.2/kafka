@@ -222,7 +222,7 @@ _kafka-consumer-groups()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--zookeeper --bootstrap-server --group --topic --list --describe --delete --new-consumer --command-config"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -237,7 +237,7 @@ _kafka-consumer-offset-checker()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--zookeeper --topic --group --socket.timeout.ms --retry.backoff.ms --broker-info --help"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -252,7 +252,7 @@ _kafka-consumer-perf-test()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--zookeeper --broker-list --topic --group --fetch-size --from-latest --socket-buffer-size --threads --num-fetch-threads --new-consumer --consumer.config"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -267,7 +267,7 @@ _kafka-mirror-maker()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--consumer.config --new.consumer --producer.config --num.streams --whitelist --blacklist --offset.commit.interval.ms --consumer.rebalance.listener --rebalance.listener.args message.handler --message.handler.args --abort.on.send.failure --help"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -282,7 +282,7 @@ _kafka-preferred-replica-election()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--path-to-json-file --zookeeper"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
