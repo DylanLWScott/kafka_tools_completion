@@ -3,6 +3,14 @@
 ## Overview
 Command completion for Kafka tools commands
 
+## How to Enable
+* Source the files for use or place these inside our shell profile
+
+```bash
+. ./kafkaAdmin
+. ./kafkaBin
+```
+
 ## Examples of Completion
 * Complete for Admin tools is by typing: kafka-run-class.sh [TAB][TAB]
 * Complete for bin tools by typing (using zookeeper-security-migration for an example): bin/zookeeper-security-migration.sh --[TAB][TAB]
