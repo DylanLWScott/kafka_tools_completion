@@ -1,7 +1,11 @@
-# kafka_tools_completion
+# Kafka Tools Completion
 
 ## Overview
 Command completion for Kafka tools commands
+
+## Examples of Completion
+* Complete for Admin tools is by typing: kafka-run-class.sh [TAB][TAB]
+* Complete for bin tools by typing (using zookeeper-security-migration for an example): bin/zookeeper-security-migration.sh --[TAB][TAB]
 
 ## Which Tools Have Auto-Complete
 * [0.10.2 Tools](https://github.com/apache/kafka/tree/0.10.2/core/src/main/scala/kafka/tools)
