@@ -1,3 +1,5 @@
+# START Kafka Admin Tools Section
+
 _kafka_complete()
 {
   local cur prev
@@ -126,6 +128,10 @@ _kafka_complete()
 } &&
 complete -F _kafka_complete kafka-run-class.sh
 
+# END Kafka Admin Tools Section
+
+## START Kafka Bin Section
+
 _connect-distributed() 
 {
     local cur prev opts
@@ -139,7 +145,7 @@ _connect-distributed()
         return 0
     fi
 }
-complete -F _connect-distributed connect-distributed
+complete -F _connect-distributed connect-distributed.sh
 
 _connect-standalone() 
 {
@@ -154,7 +160,7 @@ _connect-standalone()
         return 0
     fi
 }
-complete -F _connect-standalone connect-standalone
+complete -F _connect-standalone connect-standalone.sh
 
 _kafka-acls() 
 {
@@ -169,7 +175,7 @@ _kafka-acls()
         return 0
     fi
 }
-complete -F _kafka-acls kafka-acls
+complete -F _kafka-acls kafka-acls.sh
 
 _kafka-configs() 
 {
@@ -184,7 +190,7 @@ _kafka-configs()
         return 0
     fi
 }
-complete -F _kafka-configs kafka-configs
+complete -F _kafka-configs kafka-configs.sh
 
 _kafka-console-consumer() 
 {
@@ -199,7 +205,7 @@ _kafka-console-consumer()
         return 0
     fi
 }
-complete -F _kafka-console-consumer kafka-console-consumer
+complete -F _kafka-console-consumer kafka-console-consumer.sh
 
 _kafka-console-producer() 
 {
@@ -214,7 +220,7 @@ _kafka-console-producer()
         return 0
     fi
 }
-complete -F _kafka-console-producer kafka-console-producer
+complete -F _kafka-console-producer kafka-console-producer.sh
 
 _kafka-consumer-groups() 
 {
@@ -229,7 +235,7 @@ _kafka-consumer-groups()
         return 0
     fi
 }
-complete -F _kafka-consumer-groups kafka-consumer-groups
+complete -F _kafka-consumer-groups kafka-consumer-groups.sh
 
 _kafka-consumer-offset-checker() 
 {
@@ -244,7 +250,7 @@ _kafka-consumer-offset-checker()
         return 0
     fi
 }
-complete -F _kafka-consumer-offset-checker kafka-consumer-offset-checker
+complete -F _kafka-consumer-offset-checker kafka-consumer-offset-checker.sh
 
 _kafka-consumer-perf-test() 
 {
@@ -259,7 +265,7 @@ _kafka-consumer-perf-test()
         return 0
     fi
 }
-complete -F _kafka-consumer-perf-test kafka-consumer-perf-test
+complete -F _kafka-consumer-perf-test kafka-consumer-perf-test.sh
 
 _kafka-mirror-maker() 
 {
@@ -274,7 +280,7 @@ _kafka-mirror-maker()
         return 0
     fi
 }
-complete -F _kafka-mirror-maker kafka-mirror-maker
+complete -F _kafka-mirror-maker kafka-mirror-maker.sh
 
 _kafka-preferred-replica-election() 
 {
@@ -289,7 +295,7 @@ _kafka-preferred-replica-election()
         return 0
     fi
 }
-complete -F _kafka-preferred-replica-election kafka-preferred-replica-election
+complete -F _kafka-preferred-replica-election kafka-preferred-replica-election.sh
 
 _kafka-producer-perf-test() 
 {
@@ -304,7 +310,7 @@ _kafka-producer-perf-test()
         return 0
     fi
 }
-complete -F _kafka-producer-perf-test kafka-producer-perf-test
+complete -F _kafka-producer-perf-test kafka-producer-perf-test.sh
 
 _kafka-reassign-partitions() 
 {
@@ -319,7 +325,7 @@ _kafka-reassign-partitions()
         return 0
     fi
 }
-complete -F _kafka-reassign-partitions kafka-reassign-partitions
+complete -F _kafka-reassign-partitions kafka-reassign-partitions.sh
 
 _kafka-replay-log-producer() 
 {
@@ -334,7 +340,7 @@ _kafka-replay-log-producer()
         return 0
     fi
 }
-complete -F _kafka-replay-log-producer kafka-replay-log-producer
+complete -F _kafka-replay-log-producer kafka-replay-log-producer.sh
 
 _kafka-replica-verification() 
 {
@@ -349,7 +355,7 @@ _kafka-replica-verification()
         return 0
     fi
 }
-complete -F _kafka-replica-verification kafka-replica-verification
+complete -F _kafka-replica-verification kafka-replica-verification.sh
 
 _kafka-run-class() 
 {
@@ -364,7 +370,7 @@ _kafka-run-class()
         return 0
     fi
 }
-complete -F _kafka-run-class kafka-run-class
+complete -F _kafka-run-class kafka-run-class.sh
 
 _kafka-server-start() 
 {
@@ -379,7 +385,7 @@ _kafka-server-start()
         return 0
     fi
 }
-complete -F _kafka-server-start kafka-server-start
+complete -F _kafka-server-start kafka-server-start.sh
 
 _kafka-server-stop() 
 {
@@ -394,7 +400,7 @@ _kafka-server-stop()
         return 0
     fi
 }
-complete -F _kafka-server-stop kafka-server-stop
+complete -F _kafka-server-stop kafka-server-stop.sh
 
 _kafka-simple-consumer-shell() 
 {
@@ -409,7 +415,7 @@ _kafka-simple-consumer-shell()
         return 0
     fi
 }
-complete -F _kafka-simple-consumer-shell kafka-simple-consumer-shell
+complete -F _kafka-simple-consumer-shell kafka-simple-consumer-shell.sh
 
 _kafka-streams-application-reset() 
 {
@@ -424,7 +430,7 @@ _kafka-streams-application-reset()
         return 0
     fi
 }
-complete -F _kafka-streams-application-reset kafka-streams-application-reset
+complete -F _kafka-streams-application-reset kafka-streams-application-reset.sh
 
 _kafka-topics() 
 {
@@ -439,7 +445,7 @@ _kafka-topics()
         return 0
     fi
 }
-complete -F _kafka-topics kafka-topics
+complete -F _kafka-topics kafka-topics.sh
 
 _kafka-verifiable-consumer() 
 {
@@ -454,7 +460,7 @@ _kafka-verifiable-consumer()
         return 0
     fi
 }
-complete -F _kafka-verifiable-consumer kafka-verifiable-consumer
+complete -F _kafka-verifiable-consumer kafka-verifiable-consumer.sh
 
 _kafka-verifiable-producer() 
 {
@@ -469,7 +475,7 @@ _kafka-verifiable-producer()
         return 0
     fi
 }
-complete -F _kafka-verifiable-producer kafka-verifiable-producer
+complete -F _kafka-verifiable-producer kafka-verifiable-producer.sh
 
 _zookeeper-security-migration() 
 {
@@ -484,7 +490,7 @@ _zookeeper-security-migration()
         return 0
     fi
 }
-complete -F _zookeeper-security-migration zookeeper-security-migration
+complete -F _zookeeper-security-migration zookeeper-security-migration.sh
 
 _zookeeper-server-start() 
 {
@@ -499,7 +505,7 @@ _zookeeper-server-start()
         return 0
     fi
 }
-complete -F _zookeeper-server-start zookeeper-server-start
+complete -F _zookeeper-server-start zookeeper-server-start.sh
 
 _zookeeper-server-stop() 
 {
@@ -514,7 +520,7 @@ _zookeeper-server-stop()
         return 0
     fi
 }
-complete -F _zookeeper-server-stop zookeeper-server-stop
+complete -F _zookeeper-server-stop zookeeper-server-stop.sh
 
 _zookeeper-shell() 
 {
@@ -529,4 +535,6 @@ _zookeeper-shell()
         return 0
     fi
 }
-complete -F _zookeeper-shell zookeeper-shell
+complete -F _zookeeper-shell zookeeper-shell.sh
+
+## END Kafka Bin Section
