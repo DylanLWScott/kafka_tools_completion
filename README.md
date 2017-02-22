@@ -4,11 +4,12 @@
 Command completion for Kafka tools commands
 
 ## How to Enable
-* Source the files for use or place these inside your shell profile
+* Source the files for use or place these inside your shell profile like: ~/.bash_profile or ~/.bashrc:
+source /usr/local/git/contrib/completion/git-completion.bash
 
 ```bash
-. ./kafkaAdmin
-. ./kafkaBin
+source ./kafkaAdmin
+source ./kafkaBin
 ```
 
 ## Examples of Completion
@@ -25,6 +26,6 @@ Command completion for Kafka tools commands
 ```bash
 autoload -U compinit && compinit
 autoload -U bashcompinit && bashcompinit
-source /fullpath/bash_completion_script
+source /path/bash_completion_script
 ```
 
