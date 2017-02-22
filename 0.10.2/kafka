@@ -417,7 +417,7 @@ _kafka-streams-application-reset()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--application-id --bootstrap-servers --zookeeper --input-topics --intermediate-topics"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -432,7 +432,7 @@ _kafka-topics()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--zookeeper --list --create --delete --alter --describe --help --topic --config --delete-config --partitions --replication-factor --replica-assignment --under-replicated-partitions --unavailable-partitions --topics-with-overrides --if-exists --if-not-exists --disable-rack-aware --force"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
@@ -447,7 +447,7 @@ _kafka-verifiable-consumer()
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
     prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts="--help --verbose --version"
+    opts="--broker-list --topic --group-id --max-messages --session-timeout --verbose --eanble-autocommit --reset-policy --assignment-strategy --consumer-config"
 
     if [[ ${cur} == -* ]] ; then
         COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
