@@ -4,7 +4,7 @@
 Command completion for Kafka tools commands
 
 ## How to Enable
-* Source the files for use or place these inside our shell profile
+* Source the files for use or place these inside your shell profile
 
 ```bash
 . ./kafkaAdmin
