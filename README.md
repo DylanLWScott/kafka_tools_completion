@@ -5,7 +5,6 @@ Command completion for Kafka tools commands
 
 ## How to Enable
 * Source the files for use or place these inside your shell profile like: ~/.bash_profile or ~/.bashrc:
-source /usr/local/git/contrib/completion/git-completion.bash
 
 ```bash
 source ./kafkaAdmin
