@@ -1,7 +1,7 @@
 # Kafka Tools Completion
 
 ## Overview
-Command completion for Kafka tools commands
+Command completion for Kafka tools and bin commands
 
 ## How to Enable
 * Source the files for use or place these inside your shell profile like: ~/.bash_profile or ~/.bashrc:
